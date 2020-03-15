@@ -1,8 +1,5 @@
 module.exports = [{
-  entry: ['./mwc.scss', './mwc.js'],
-  output: {
-    filename: 'mwc.min.js',
-  },
+  entry: ['./m3.scss'],
   module: {
     rules: [
       {
@@ -11,7 +8,7 @@ module.exports = [{
           {
             loader: 'file-loader',
             options: {
-              name: 'mwc.min.css',
+              name: 'm3.min.css',
             },
           },
           { loader: 'extract-loader' },
@@ -24,13 +21,6 @@ module.exports = [{
             }
           }
         ]
-      },
-      {
-        test: /\.js$/,
-        loader: 'babel-loader',
-        query: {
-          presets: ['@babel/preset-env'],
-        }
       }
     ]
   },
